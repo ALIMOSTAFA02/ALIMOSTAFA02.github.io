@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ali Mostafa — Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5F7;--surface:#FFFFFF;--ink:#13222D;--muted:#51636F;--line:#D3DCE2;--accent:#0B7285;--accent-ink:#FFFFFF;--warn:#B7791F;--bad:#B4443A;--good:#2F7D4F;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A22;--surface:#152530;--ink:#E6EEF2;--muted:#9DB0BB;--line:#26404F;--accent:#4FC3D6;--accent-ink:#06222A;--warn:#E3B04B;--bad:#E57A70;--good:#6CC48F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A22;--surface:#152530;--ink:#E6EEF2;--muted:#9DB0BB;--line:#26404F;--accent:#4FC3D6;--accent-ink:#06222A;--warn:#E3B04B;--bad:#E57A70;--good:#6CC48F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+header.top b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;letter-spacing:-.025em}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:34em;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.btn.s{color:var(--accent)}
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+.sheet .cap{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:340px}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.dirty{color:var(--bad);text-decoration:line-through;text-decoration-thickness:1px}
+.fix{color:var(--good);font-weight:600}
+.sheet .foot{padding:10px 14px;border-top:1px solid var(--line);color:var(--muted)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.sub{color:var(--muted);max-width:40em;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.proj h3{font-size:22px}
+.proj p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{font-size:13px;font-weight:500;padding:3px 10px;border-radius:99px;border:1px solid var(--line)}
+.status{font-size:13px;font-weight:600;color:var(--warn)}
+.status.done{color:var(--good)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.skills h3{font-size:18px;margin-bottom:10px}
+.skills ul{margin:0;padding:0;list-style:none;color:var(--muted)}
+.skills li{padding:5px 0;border-bottom:1px solid var(--line)}
+.edu{display:grid;grid-template-columns:200px 1fr;gap:12px 32px}
+.edu .d{color:var(--muted);font-weight:500}
+.contact a.big{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(22px,4vw,34px);font-weight:700;word-break:break-all}
+.links{display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;font-weight:500}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px}
+@media(max-width:800px){.hero,.grid,.skills,.edu{grid-template-columns:1fr}.hero{gap:32px;padding-top:32px}nav a{margin:0 16px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><b>Ali Mostafa</b><nav><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<div>
+<h1>I turn messy data into clear decisions.</h1>
+<p class="lead">I’m a data analyst with a Computer Science and AI degree. I use Python, SQL and Excel to collect, clean and analyze data, then report what it means for the business.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn s" href="#contact">Get in touch</a></div>
+</div>
+<div class="sheet" aria-label="Example of data cleaning">
+<div class="cap">cleaning_example.csv</div>
+<div class="scroll"><table>
+<tr><th>job_title</th><th>location</th><th>salary</th></tr>
+<tr><td><span class="dirty">  data analyst </span> <span class="fix">Data Analyst</span></td><td><span class="dirty">cairo,egypt</span> <span class="fix">Cairo</span></td><td><span class="dirty">N/A</span> <span class="fix">null</span></td></tr>
+<tr><td><span class="dirty">DATA ANALYST </span> <span class="fix">Data Analyst</span></td><td><span class="dirty">Cairo </span> <span class="fix">Cairo</span></td><td><span class="dirty">12,000 EGP</span> <span class="fix">12000</span></td></tr>
+<tr><td><span class="dirty">Data  analyst</span> <span class="fix">Data Analyst</span></td><td><span class="dirty">Giza,Egypt</span> <span class="fix">Giza</span></td><td><span class="dirty">12000.0</span> <span class="fix">12000</span></td></tr>
+</table></div>
+<div class="foot">Illustrative sample. Red is raw, green is cleaned.</div>
+</div>
+</div>
+</div>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">End-to-end work, from collecting the data to reporting the insight.</p>
+<div class="grid">
+<article class="proj"><span class="status done">Completed</span><h3>Job Data Scraper</h3><p>A Python app that pulls live job listings from Wuzzuf: titles, companies, locations, salaries, posting dates and links. It exports a clean CSV that is ready to analyze.</p><div class="tags"><span>Python</span><span>Requests</span><span>BeautifulSoup</span><span>CSV</span></div></article>
+<article class="proj"><span class="status">In progress</span><h3>E-Commerce Sales Dashboard</h3><p>Revenue, orders, average order value and profit margin for the UCI Online Retail dataset, with monthly and weekly trends and product and category analysis.</p><div class="tags"><span>SQL</span><span>Excel</span><span>Power BI</span></div></article>
+<article class="proj"><span class="status">In progress</span><h3>E-Commerce Customer Analysis</h3><p>Customer segmentation with RFM, repeat purchase behavior, average order value and customer lifetime value on the same 541,909-row retail dataset.</p><div class="tags"><span>SQL</span><span>Excel</span><span>Power BI</span><span>DAX</span></div></article>
+<article class="proj"><span class="status">In progress</span><h3>Marketing A/B Test Analysis</h3><p>Compares ad and PSA conversion across about 588,000 users to test whether the ads actually worked, using hypothesis tests in Python.</p><div class="tags"><span>Python</span><span>pandas</span><span>statsmodels</span></div></article>
+<article class="proj"><span class="status">In progress</span><h3>Bank Marketing Campaign Analysis</h3><p>Which of 45,211 contacts subscribed to a term deposit, and why. A SQL star schema feeds a Power BI report.</p><div class="tags"><span>SQL</span><span>Power BI</span><span>DAX</span></div></article>
+<article class="proj"><span class="status done">Completed</span><h3>Remote Control Light Switch</h3><p>My graduation project: a remote-controlled lighting system built from Arduino hardware, a custom PCB and software. Graded Very Good.</p><div class="tags"><span>Arduino</span><span>PCB design</span><span>Debugging</span></div></article>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="sub">The tools I use to get from raw data to a report.</p>
+<div class="skills">
+<div><h3>Analysis</h3><ul><li>Python (Pandas)</li><li>SQL, MySQL Workbench</li><li>Basic statistics</li><li>Data cleaning</li></ul></div>
+<div><h3>Reporting</h3><ul><li>Excel formulas</li><li>Pivot tables</li><li>Power BI</li><li>CSV and data export</li></ul></div>
+<div><h3>Collection and build</h3><ul><li>Web scraping (Requests, BeautifulSoup)</li><li>Arduino and PCB design</li><li>VS Code, basic Linux</li><li>Arabic (native), English (fluent)</li></ul></div>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education</h2>
+<div class="edu" style="margin-top:28px">
+<div class="d">Oct 2020 – Jul 2024</div>
+<div><h3 style="font-size:22px">B.Sc. Computer Science and Artificial Intelligence</h3><p style="margin:6px 0 0;color:var(--muted)">Modern University for Technology &amp; Information, Faculty of Computer Science. Graduation project grade: Very Good.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<h2>Let’s work together</h2>
+<p class="sub">I’m looking for a data analyst role where I can work on real datasets.</p>
+<a class="big" href="mailto:ali.aboeleyoun2002@gmail.com">ali.aboeleyoun2002@gmail.com</a>
+<div class="links"><a href="https://github.com/ALIMOSTAFA02">GitHub</a><a href="https://linkedin.com/in/ali-ehab-aaba603b5">LinkedIn</a><a href="tel:+201099451644">01099451644</a></div>
+</div></section>
+
+<div class="wrap"><footer>© 2026 Ali Mostafa</footer></div>
+</body>
+</html>
